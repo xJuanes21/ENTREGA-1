@@ -1,0 +1,162 @@
+{
+	"info": {
+		"_postman_id": "7713b503-9904-4a8d-aaa1-2d44edb822b9",
+		"name": "BD2 BACKEND",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "30719615"
+	},
+	"item": [
+		{
+			"name": "Crear Curso",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"_id\":0,\r\n\"name\":\"Futbol\",\r\n\"category\":\"Deporte\",\r\n\"price\":85000,\r\n\"totalHours\":30}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:8080/curso/"
+			},
+			"response": []
+		},
+		{
+			"name": "Crear Usuario",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"_id\":\"1117012178\",\r\n\"nombre\":\"Oblivion Mighty Trash\",\r\n\"carrera\":\"Diseño\",\r\n\"semestre\": 7}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:8080/user/"
+			},
+			"response": []
+		},
+		{
+			"name": "Crear Tutor",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": " {\r\n        \"_id\": \"abc1283\",\r\n        \"nombre\": \"Juan Ortega\",\r\n        \"carrera\": \"Ingenieria Informatica\",\r\n        \"semestre\": 8,\r\n        \"calificacion_prom\": 4.9,\r\n        \"courses\": [\r\n            {\r\n                \"_id\": \"65fb42ac73f9435c5f38e127\",\r\n                \"name\": \"Data Science with Python\",\r\n                \"category\": \"Programming\",\r\n                \"price\": 0.0,\r\n                \"totalHours\": 30.0\r\n            }\r\n        ]\r\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:8080/tutor/"
+			},
+			"response": []
+		},
+		{
+			"name": "Crear Rating",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"_id\":\"122js22\",\r\n\"nombre\":\"Lorena Velasquez\",\r\n\"carrera\":\"Artes\",\r\n\"semestre\": 6,\r\n\"calificacion_prom\": 4.9}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:8080/ratting/"
+			},
+			"response": []
+		},
+		{
+			"name": "Consulta 1",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/ratting/consulta1?n=4.6\n",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"ratting",
+						"consulta1"
+					],
+					"query": [
+						{
+							"key": "n",
+							"value": "4.6\n"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Consulta 2",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:8080/tutor/consulta2/4.0\n"
+			},
+			"response": []
+		},
+		{
+			"name": "Lista Tutores",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:8080/tutor/list"
+			},
+			"response": []
+		}
+	]
+}
